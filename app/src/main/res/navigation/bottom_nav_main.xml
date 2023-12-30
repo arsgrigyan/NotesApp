@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_notes">
+
+    <fragment
+        android:id="@+id/navigation_notes_tab"
+        android:name="com.southernsunrise.notesapp.ui.fragments.notes.NotesTabFragment"
+        android:label="@string/fragment_notes_tab"
+        tools:layout="@layout/fragment_notes_tab" />
+
+
+    <fragment
+        android:id="@+id/navigation_draw_draw"
+        android:name="com.southernsunrise.notesapp.ui.fragments.draw.DrawTabFragment"
+        android:label="@string/fragment_draw_tab"
+        tools:layout="@layout/fragment_draw_tab" />
+
+    <fragment
+        android:id="@+id/navigation_starred"
+        android:name="com.southernsunrise.notesapp.ui.fragments.starreds.StarredTabFragment"
+        android:label="@string/fragment_starred_tab"
+        tools:layout="@layout/fragment_starred_tab" />
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.southernsunrise.notesapp.ui.fragments.settings.SettingsTabFragment"
+        android:label="@string/fragment_settings_tab"
+        tools:layout="@layout/fragment_settings_tab" />
+
+</navigation>

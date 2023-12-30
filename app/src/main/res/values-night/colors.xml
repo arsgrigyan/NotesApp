@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="blue_light">#1d91f8</color>
+    <color name="blue_dark">#155997</color>
+    <color name="orange_light">#F19D23</color>
+    <color name="orange_dark">#B37214</color>
+
+    <!-- App theme colors -->
+    <color name="color_primary">@color/orange_light</color>
+    <color name="color_primary_variant">@color/orange_dark</color>
+    <color name="color_secondary">@color/blue_light</color>
+    <color name="color_secondary_variant">@color/blue_dark</color>
+
+    <color name="disabled_button_foreground_color">#64000000</color>
+
+    <color name="app_root_background">#252525</color>
+    <color name="text_color">#eeeeee</color>
+    <color name="notes_card_text_on_bright_bg">#EE252525</color>
+    <color name="dark_text_on_dark_bg">#9a9a9a</color>
+
+    <color name="note_title_text_color">#CFCECE</color>
+    <color name="note_title_hint_color">#8CCFCECE</color>
+    <color name="note_body_text_color">#CECFCECE</color>
+    <color name="note_body_hint_color">#66CFCECE</color>
+
+
+    <color name="color_note_list_pink">#FD99FF</color>
+    <color name="color_note_list_rose_bud">#FF9E9E</color>
+    <color name="color_note_list_green">#91F48F</color>
+    <color name="color_note_list_yellow">#FFF599</color>
+    <color name="color_note_list_purple">#B69CFF</color>
+
+</resources>

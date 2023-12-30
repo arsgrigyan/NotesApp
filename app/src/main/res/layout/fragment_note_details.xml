@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/create_note_bottom_sheet_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_root_background"
+    android:elevation="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/transparent"
+            android:rotation="90"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_arrow_bottom"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.1"
+            app:tint="@color/note_title_text_color" />
+
+        <TextView
+            android:id="@+id/edit_save_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit"
+            android:textColor="@color/color_primary"
+            android:textSize="26sp"
+            app:layout_constraintBottom_toTopOf="@+id/note_title_edit_text"
+            app:layout_constraintEnd_toEndOf="@+id/note_title_edit_text"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+            android:id="@+id/note_title_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/transparent"
+            android:enabled="false"
+            android:focusable="true"
+            android:fontFamily="@font/corporative_sans_rd_regular"
+            android:hint="@string/title"
+            android:ellipsize="end"
+            android:inputType="text"
+            android:maxLength="15"
+            android:maxLines="2"
+            android:nextFocusDown="@+id/note_content_edit_text"
+            android:textColor="@color/note_title_text_color"
+            android:textColorHint="@color/note_title_hint_color"
+            android:textSize="50sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/back_button"
+            app:layout_constraintWidth_percent="0.9" />
+
+        <EditText
+            android:id="@+id/note_content_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@android:color/transparent"
+            android:enabled="false"
+            android:fontFamily="@font/corporative_sans_rd_regular"
+            android:gravity="start"
+            android:ellipsize="end"
+            android:hint="@string/type_something"
+            android:textColor="@color/note_body_text_color"
+            android:textColorHint="@color/note_body_hint_color"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/note_title_edit_text"
+            app:layout_constraintStart_toStartOf="@+id/note_title_edit_text"
+            app:layout_constraintTop_toBottomOf="@id/note_title_edit_text"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintWidth_percent="0.9" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

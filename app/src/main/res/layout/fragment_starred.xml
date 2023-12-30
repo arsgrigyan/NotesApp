@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_root_background"
+    tools:context=".fragments.notes.notes.NotesFragment">
+
+    <TextView
+        android:id="@+id/tv_app_name"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/corporative_sans_rd_medium"
+        android:gravity="start|center"
+        android:text="@string/title_starred"
+        android:textColor="@color/text_color"
+        app:autoSizeMaxTextSize="40sp"
+        app:autoSizeMinTextSize="26sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintDimensionRatio="5:2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/notes_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:paddingBottom="?attr/actionBarSize"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_app_name"
+        tools:itemCount="7"
+        tools:listitem="@layout/notes_card_recycler_view_item" />
+
+    <LinearLayout
+        android:id="@+id/view_nothing_in_starred"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_app_name"
+        app:layout_constraintVertical_bias="0.35"
+        app:layout_constraintWidth_percent="0.6"
+        tools:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_notes_empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_starred_folder"
+            app:tint="@color/note_body_hint_color" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/corporative_sans_rd_regular"
+            android:gravity="center"
+            android:text="@string/nothing_in_starred"
+            android:textColor="@color/text_color"
+            android:textSize="24sp"
+
+            />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

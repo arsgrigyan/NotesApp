@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/create_note_bottom_sheet_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_root_background"
+    android:elevation="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_arrow_bottom"
+            app:layout_constraintBottom_toBottomOf="@+id/done_button"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1"
+            app:layout_constraintWidth_percent="0.1"
+            app:layout_goneMarginTop="20dp"
+            app:tint="@color/note_title_text_color" />
+
+        <ImageButton
+            android:id="@+id/add_reminder_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_add_reminder"
+            app:layout_constraintBottom_toBottomOf="@+id/done_button"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@+id/done_button"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/done_button"
+            app:layout_constraintVertical_bias="1"
+            app:layout_constraintWidth_percent="0.1"
+            app:tint="@color/note_title_text_color" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/done_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/shape_rectangle_30dp_radius"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:backgroundTint="#878787"
+            android:foreground="@drawable/shape_rectangle_30dp_radius"
+            android:enabled="false"
+            android:foregroundTint="@color/foreground_color_done_image_btn"
+            android:text="@string/done"
+            android:textColor="#EEFFFFFF"
+            app:autoSizeMaxTextSize="16sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintDimensionRatio="5:2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.25" />
+
+
+        <EditText
+            android:id="@+id/note_title_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@android:color/transparent"
+            android:focusable="true"
+            android:fontFamily="@font/corporative_sans_rd_regular"
+            android:hint="@string/title"
+            android:inputType="text"
+            android:maxLength="15"
+            android:maxLines="2"
+            android:textColor="@color/note_title_text_color"
+            android:textColorHint="@color/note_title_hint_color"
+            android:textSize="50sp"
+            android:nextFocusDown="@+id/note_content_edit_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/done_button"
+            app:layout_constraintWidth_percent="0.9" />
+
+        <EditText
+            android:id="@+id/note_content_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/corporative_sans_rd_regular"
+            android:gravity="start"
+            android:hint="@string/type_something"
+            android:textColor="@color/note_body_text_color"
+            android:textColorHint="@color/note_body_hint_color"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/note_title_edit_text"
+            app:layout_constraintStart_toStartOf="@+id/note_title_edit_text"
+            app:layout_constraintTop_toBottomOf="@id/note_title_edit_text"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintWidth_percent="0.9" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

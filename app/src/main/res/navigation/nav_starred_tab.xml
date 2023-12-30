@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_starred_tab.xml"
+    app:startDestination="@id/starredFragment">
+
+    <fragment
+        android:id="@+id/starredFragment"
+        android:name="com.southernsunrise.notesapp.ui.fragments.starreds.StarredFragment"
+        android:label="StarredFragment"
+        tools:layout="@layout/fragment_starred">
+        <action
+            android:id="@+id/action_starredFragment_to_noteDetailsFragment"
+            app:destination="@id/noteDetailsFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/noteDetailsFragment"
+        android:name="com.southernsunrise.notesapp.ui.fragments.notes.noteDetails.NoteDetailsFragment"
+        android:label="NoteDetailsFragment"
+        tools:layout="@layout/fragment_note_details">
+        <argument
+            android:name="note"
+            app:argType="com.southernsunrise.notesapp.data.models.NoteModel" />
+    </fragment>
+</navigation>

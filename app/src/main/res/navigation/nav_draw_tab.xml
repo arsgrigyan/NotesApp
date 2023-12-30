@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_draw_tab.xml"
+    app:startDestination="@id/drawFragment">
+
+    <fragment
+        android:id="@+id/drawFragment"
+        android:name="com.southernsunrise.notesapp.ui.fragments.draw.draw.DrawFragment"
+        android:label="fragment_draw"
+        tools:layout="@layout/fragment_draw" >
+        <action
+            android:id="@+id/action_drawFragment_to_drawingDetailsFragment"
+            app:destination="@id/drawingDetailsFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/drawingDetailsFragment"
+        android:name="com.southernsunrise.notesapp.ui.fragments.draw.drawDetails.DrawingDetailsFragment"
+        android:label="DrawingDetailsFragment" >
+        <argument
+            android:name="drawing"
+            app:argType="com.southernsunrise.notesapp.data.models.DrawingModel" />
+    </fragment>
+</navigation>

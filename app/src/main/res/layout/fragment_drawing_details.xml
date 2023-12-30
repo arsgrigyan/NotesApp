@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_root_background"
+    android:clickable="true"
+    android:elevation="8dp"
+    android:focusable="true"
+    tools:context=".fragments.draw.createDrawing.CreateDrawingFragment">
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@android:color/transparent"
+        android:rotation="90"
+        android:src="@drawable/ic_arrow_bottom"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintWidth_percent="0.1"
+        app:layout_goneMarginTop="20dp"
+        app:tint="@color/note_title_text_color" />
+
+    <TextView
+        android:id="@+id/save_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:textColor="@color/color_primary"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="@+id/back_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toEndOf="@+id/back_button"
+        app:layout_constraintTop_toTopOf="@+id/back_button" />
+
+    <com.southernsunrise.notesapp.ui.views.DrawingView
+        android:id="@+id/drawing_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginVertical="15dp"
+        android:background='@drawable/bg_drawing_card'
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back_button"
+        app:layout_constraintVertical_bias="0.85"
+        app:layout_constraintWidth_percent="0.8" />
+
+
+    <com.southernsunrise.notesapp.ui.views.VerticalSeekbar
+        android:id="@+id/draw_size_change_seekbar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:max="100"
+        android:min="20"
+        android:paddingEnd="50dp"
+        android:progressTint="@color/color_primary"
+        android:thumbTint="@color/color_primary"
+        app:layout_constraintBottom_toBottomOf="@+id/drawing_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintStart_toEndOf="@+id/drawing_view"
+        app:layout_constraintTop_toTopOf="@+id/drawing_view"
+        app:layout_constraintVertical_bias="0.4"
+        app:layout_constraintWidth_percent="0.1" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/color_pick_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardBackgroundColor="@color/color_secondary"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/drawing_view"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/draw_size_change_seekbar"
+        app:layout_constraintStart_toStartOf="@+id/draw_size_change_seekbar"
+        app:layout_constraintTop_toBottomOf="@+id/draw_size_change_seekbar"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <ImageView
+        android:id="@+id/clear_all_image_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_oval"
+        android:backgroundTint="@android:color/transparent"
+        android:clipToOutline="true"
+        android:padding="5dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_clear_all"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/color_pick_button"
+        app:layout_constraintStart_toStartOf="@+id/color_pick_button"
+        app:layout_constraintTop_toBottomOf="@+id/color_pick_button"
+        app:tint="@color/note_body_text_color" />
+
+    <FrameLayout
+        android:id="@+id/updating_drawing_progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#5E000000"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
